@@ -4,13 +4,19 @@ import org.junit.jupiter.api.*;
 import static org.assertj.core.api.Assertions.*;
 
 public class PawnTest {
+
     @Test
-    @DisplayName("흑백 객체가 잘 생성되는지 확인")
+    @DisplayName("흑백 객체가 생성되어야 한다.")
     void create() {
-        final String white = "white";
-        final String black = "black";
-        verifyPawn(white);
-        verifyPawn(black);
+        verifyPawn(Pawn.WHITE);
+        verifyPawn(Pawn.BLACK);
+    }
+
+    @Test
+    @DisplayName("기본 생성자로 흰색 폰이 생성되어야 한다.")
+    void createDefault() {
+        Pawn p = new Pawn();
+        assertThat(p.getColor()).isEqualTo(Pawn.WHITE);
     }
 
     void verifyPawn(String color) {
