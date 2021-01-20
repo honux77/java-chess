@@ -7,7 +7,13 @@ public class PawnTest {
     @Test
     @DisplayName("흑백 객체가 잘 생성되는지 확인")
     void create() {
-        Pawn p = new Pawn("white");
-        assertThat(p).isNotNull();
+        final String white = "white";
+        final String black = "black";
+        verifyPawn(white);
+        verifyPawn(black);
+    }
+
+    void verifyPawn(String color) {
+        assertThat(new Pawn(color).getColor()).isEqualTo(color);
     }
 }
