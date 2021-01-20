@@ -11,7 +11,7 @@ public class BoardTest {
     void setup() {
         board = new Board();
         assertThat(board).isNotNull();
-        assertThat(board.getSize()).isEqualTo(0);
+        assertThat(board.size()).isEqualTo(0);
     }
 
     @Test
@@ -23,7 +23,7 @@ public class BoardTest {
 
     void checkAddPawn(String color, int size) {
         board.add(new Pawn(color));
-        assertThat(board.getSize()).isEqualTo(size);
+        assertThat(board.size()).isEqualTo(size);
         assertThat(board.getPawn(size - 1).getColor()).isEqualTo(color);
     }
 }

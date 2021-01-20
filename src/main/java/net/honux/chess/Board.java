@@ -9,7 +9,7 @@ public class Board {
 
     private List<Pawn> pawnList = new ArrayList<>();
 
-    public int getSize() {
+    public int size() {
         return pawnList.size();
     }
 
