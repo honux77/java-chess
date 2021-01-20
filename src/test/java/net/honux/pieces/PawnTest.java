@@ -1,4 +1,4 @@
-package net.honux.chess;
+package net.honux.pieces;
 
 import org.junit.jupiter.api.*;
 import static org.assertj.core.api.Assertions.*;

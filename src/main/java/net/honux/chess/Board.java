@@ -1,5 +1,7 @@
 package net.honux.chess;
 
+import net.honux.pieces.Pawn;
+
 import java.util.ArrayList;
 import java.util.List;
 
