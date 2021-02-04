@@ -47,6 +47,13 @@ public class Board {
         return minus;
     }
 
+    public boolean movePiece(File f1, int r1, File f2, int r2) {
+        if (getPiece(f2, r2).getType() != Type.NONE) return false;
+        Piece newPiece = Piece.copy(getPiece(f1, r1));
+        setPiece(newPiece, f2, r2);
+        return true;
+    }
+
     public enum File {
         A(0), B(1), C(2), D(3), E(4), F(5), G(6), H(7);
         private static File[] values = File.values();

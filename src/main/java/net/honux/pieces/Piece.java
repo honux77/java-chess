@@ -20,6 +20,10 @@ public class Piece {
         return new Piece(type, color);
     }
 
+    public static Piece copy(Piece piece) {
+        return new Piece(piece.getType(), piece.getColor());
+    }
+
     private void setRepresentation() {
         if(this.color == Piece.Color.BLACK) {
             this.representation = toUpperCase(this.type.getRepresentation());
